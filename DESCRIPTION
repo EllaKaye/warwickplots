@@ -1,12 +1,15 @@
 Package: warwickplots
-Title: What the Package Does (One Line, Title Case)
+Title: Palettes and themes aligned with The University of Warwick's ID7 branding
 Version: 0.0.0.9000
 Authors@R: 
-    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"),
-           comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
-License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
-    license
+    person("Ella", "Kaye", , "ella.m.kaye@warwick.ac.uk", role = c("aut", "cre"),
+           comment = c(ORCID = "0000-0002-7300-3718"))
+Description: Colour palettes and 'ggplot2' themes that are consistent with The 
+    University of Warwick's ID7 branding. Built using the 'palettes' package, 
+    which provides methods for printing, formatting, casting and coercion, 
+    extraction and updating of components, plotting, colour mixing arithmetic, 
+    and colour interpolation.
+License: ISC License + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.2.3
