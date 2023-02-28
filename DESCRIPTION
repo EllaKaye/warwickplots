@@ -16,5 +16,6 @@ RoxygenNote: 7.2.3
 URL: https://github.com/Warwick-Stats-Resources/warwickplots
 BugReports: https://github.com/Warwick-Stats-Resources/warwickplots/issues
 Depends: 
+    palettes,
     R (>= 2.10)
 LazyData: true
