@@ -9,22 +9,29 @@
 \format{
 \subsection{\code{warwick_palettes}}{
 
-An object of class \code{palettes_palette} with 3
+An object of class \code{palettes_palette} with 6
 colour palettes. Use \code{names(warwick_palettes)} to return all palette names.
 }
 
 \subsection{\code{warwick_palettes_discrete}}{
 
 An object of class \code{palettes_palette} with
-2 discrete colour palettes.
+1 discrete colour palettes.
 Use \code{names(warwick_palettes_discrete)} to return all palette names.
 }
 
 \subsection{\code{warwick_palettes_sequential}}{
 
 An object of class \code{palettes_palette} with
-1 sequential colour palettes.
+3 sequential colour palettes.
 Use \code{names(warwick_palettes_sequential)} to return all palette names.
+}
+
+\subsection{\code{warwick_palettes_divergent}}{
+
+An object of class \code{palettes_palette} with
+2 sequential colour palettes.
+Use \code{names(warwick_palettes_divergent)} to return all palette names.
 }
 }
 \source{
@@ -36,16 +43,18 @@ warwick_palettes
 warwick_palettes_discrete
 
 warwick_palettes_sequential
+
+warwick_palettes_sequential
 }
 \description{
-Palettes consistent with The University of Warwick's ID7 branding.
+Palettes consistent with The University of Warwick's brand.
 }
 \examples{
 # Get all palettes by name.
 names(warwick_palettes)
 
 # Plot all palettes.
-plot(warwick_palettes)
+plot(warwick_palettes$primary)
 }
 \seealso{
 \code{\link[=pal_palette]{pal_palette()}}, \code{\link[=pal_colour]{pal_colour()}}
