@@ -4,7 +4,7 @@
 \name{warwickplots-package}
 \alias{warwickplots}
 \alias{warwickplots-package}
-\title{warwickplots: Palettes and themes aligned with The University of Warwick's ID7 branding}
+\title{warwickplots: Palettes and themes aligned with The University of Warwick's brand}
 \description{
 Colour palettes and 'ggplot2' themes that are consistent with The University of Warwick's ID7 branding. Built using the 'palettes' package, which provides methods for printing, formatting, casting and coercion, extraction and updating of components, plotting, colour mixing arithmetic, and colour interpolation.
 }
