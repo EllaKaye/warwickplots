@@ -35,4 +35,4 @@
 #' An object of class `palettes_palette` with
 #' `r length(warwick_palettes_divergent)` sequential colour palettes.
 #'  Use `names(warwick_palettes_divergent)` to return all palette names.
-"warwick_palettes_sequential"
+"warwick_palettes_divergent"

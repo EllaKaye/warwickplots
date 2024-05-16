@@ -5,6 +5,7 @@
 \alias{warwick_palettes}
 \alias{warwick_palettes_discrete}
 \alias{warwick_palettes_sequential}
+\alias{warwick_palettes_divergent}
 \title{University of Warwick palettes}
 \format{
 \subsection{\code{warwick_palettes}}{
@@ -44,7 +45,7 @@ warwick_palettes_discrete
 
 warwick_palettes_sequential
 
-warwick_palettes_sequential
+warwick_palettes_divergent
 }
 \description{
 Palettes consistent with The University of Warwick's brand.
