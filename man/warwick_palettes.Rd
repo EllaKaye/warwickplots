@@ -61,6 +61,6 @@ plot(warwick_palettes$primary)
 \code{\link[=pal_palette]{pal_palette()}}, \code{\link[=pal_colour]{pal_colour()}}
 }
 \author{
-\link{Ella Kaye}(https://github.com/Ella Kaye)
+\href{https://github.com/EllaKaye}{Ella Kaye}
 }
 \keyword{datasets}

@@ -6,7 +6,7 @@
 #' An object of class `palettes_palette` with `r length(warwick_palettes)`
 #' colour palettes. Use `names(warwick_palettes)` to return all palette names.
 #' @source <https://github.com/Warwick-Stats-Resources/warwickplots>
-#' @author [Ella Kaye](https://github.com/Ella Kaye)
+#' @author [Ella Kaye](https://github.com/EllaKaye)
 #' @seealso [pal_palette()], [pal_colour()]
 #' @examples
 #' # Get all palettes by name.
