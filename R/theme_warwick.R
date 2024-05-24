@@ -30,12 +30,12 @@ theme_warwick <- function(base_size = 11) {
     plot.title.position = "plot",
     plot.subtitle = ggtext::element_textbox_simple(size = ggplot2::rel(1.1), margin = ggplot2::margin(4, 0, 4, 0)),
     axis.text.y = ggplot2::element_text(colour = mid_text),
-    axis.title.y = ggplot2::element_text(size = base_size, margin = ggplot2::margin(0, 4, 0, 0)),
+    axis.title.y = ggplot2::element_text(size = base_size, margin = ggplot2::margin(r = 10)),
     axis.text.x = ggplot2::element_text(colour = mid_text, size = base_size),
-    axis.title.x = ggplot2::element_text(size = base_size, margin = ggplot2::margin(0, 4, 0, 0)),
+    axis.title.x = ggplot2::element_text(size = base_size, margin = ggplot2::margin(t = 10)),
     legend.position = "top",
     legend.justification = 1,
     panel.grid = ggplot2::element_line(colour = pale_text),
-    plot.caption = ggplot2::element_text(size = ggplot2::rel(0.8), margin = ggplot2::margin(8, 0, 0, 0)),
+    plot.caption = ggplot2::element_text(size = ggplot2::rel(0.8), margin = ggplot2::margin(t = 12)),
     plot.margin = ggplot2::margin(0.25, 0.25, 0.25, 0.25,"cm"))
 }

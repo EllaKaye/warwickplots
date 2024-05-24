@@ -50,8 +50,6 @@ ggplot(penguins, aes(flipper_length_mm, body_mass_g, group = species)) +
        y = "body mass (g)") +
   theme_warwick() +
   theme(legend.position = 'none')
-#> Warning: Removed 2 rows containing missing values or values outside the scale range
-#> (`geom_point()`).
 ```
 
 ![](man/figures/README-example-1.png)<!-- -->

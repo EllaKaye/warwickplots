@@ -39,7 +39,7 @@ devtools::install_github("Warwick-Stats-Resources/warwickplots")
 
 Below is a plot that uses the `primary` palette and `theme_warwick()`.
 
-```{r example}
+```{r example, warning=FALSE}
 library(warwickplots)
 library(ggplot2)
 library(palmerpenguins)
