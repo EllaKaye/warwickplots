@@ -1,5 +1,5 @@
 Package: warwickplots
-Title: Palettes and themes aligned with The University of Warwick's brand
+Title: Palettes and themes consistent with The University of Warwick's brand
 Version: 0.0.0.9000
 Authors@R: 
     person("Ella", "Kaye", , "ella.m.kaye@warwick.ac.uk", role = c("aut", "cre"),
