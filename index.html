@@ -75,23 +75,32 @@
 <!-- badges: start -->
 <!-- badges: end -->
 <p>An R package with colour palettes and themes that are consistent with The University of Warwick’s <a href="https://warwick.ac.uk/about/brand/brand-guidelines/" class="external-link">branding</a>, especially its <a href="https://warwick.ac.uk/about/brand/brand-guidelines/colours/" class="external-link">colours</a> and <a href="https://warwick.ac.uk/about/brand/brand-guidelines/typography/" class="external-link">typography</a>.</p>
-<p>The palettes are built using the <a href="https://mccarthy-m-g.github.io/palettes/index.html" class="external-link"><strong>palettes</strong></a> package.</p>
+<p>The palettes are built using the <a href="https://mccarthy-m-g.github.io/palettes/index.html" class="external-link"><strong>palettes</strong></a> package. The ggplot2 theme is heavily inspired by the work of <a href="https://www.cararthompson.com/" class="external-link">Cara Thompson</a>, particularly this talk on <a href="https://www.cararthompson.com/talks/nhsr2022-ggplot-themes/" class="external-link">applying a unifying aesthetic to your plots</a>.</p>
 <div class="section level2">
 <h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
 </h2>
 <p>You can install the development version of warwickplots from <a href="https://github.com/" class="external-link">GitHub</a> with:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="co"># install.packages("devtools")</span></span>
-<span><span class="fu">devtools</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"Warwick-Stats-Resources/warwickplots"</span><span class="op">)</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="co"># install.packages("remotes")</span></span>
+<span><span class="fu">remotes</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"Warwick-Stats-Resources/warwickplots"</span><span class="op">)</span></span></code></pre></div>
 </div>
 <div class="section level2">
-<h2 id="example">Example<a class="anchor" aria-label="anchor" href="#example"></a>
+<h2 id="palettes">Palettes<a class="anchor" aria-label="anchor" href="#palettes"></a>
 </h2>
-<p>Below is a plot that uses the <code>warwick_palettes::primary</code> palette and <code><a href="reference/theme_warwick.html">theme_warwick()</a></code>.</p>
+<p>The package offers six colour palettes: one discrete, two divergent and three sequential:</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/Warwick-Stats-Resources/warwickplots" class="external-link">warwickplots</a></span><span class="op">)</span></span>
 <span><span class="co">#&gt; Loading required package: palettes</span></span></code></pre></div>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">warwick_palettes</span><span class="op">)</span></span></code></pre></div>
+<p><img src="reference/figures/README-palettes-1.png"><!-- --></p>
+</div>
+<div class="section level2">
+<h2 id="theme_warwick">
+<code>theme_warwick</code><a class="anchor" aria-label="anchor" href="#theme_warwick"></a>
+</h2>
+<p>Below is a plot that uses the <code>warwick_palettes::primary</code> palette and <code><a href="reference/theme_warwick.html">theme_warwick()</a></code>.</p>
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org" class="external-link">ggplot2</a></span><span class="op">)</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://allisonhorst.github.io/palmerpenguins/" class="external-link">palmerpenguins</a></span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span><span class="va">penguins</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span><span class="va">flipper_length_mm</span>, <span class="va">body_mass_g</span>, group <span class="op">=</span> <span class="va">species</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
