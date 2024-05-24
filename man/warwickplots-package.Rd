@@ -4,7 +4,7 @@
 \name{warwickplots-package}
 \alias{warwickplots}
 \alias{warwickplots-package}
-\title{warwickplots: Palettes and themes consistent with The University of Warwick's brand}
+\title{warwickplots: Palettes and Themes Consistent with The University of Warwick's Brand}
 \description{
 \if{html}{\figure{logo.png}{options: style='float: right' alt='logo' width='120'}}
 
