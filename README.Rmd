@@ -55,4 +55,4 @@ ggplot(penguins, aes(flipper_length_mm, body_mass_g, group = species)) +
   theme(legend.position = 'none')
 ```
 
-For further documentation, see the ['Get started'](https://warwick-stats-resources.github.io/warwickplots/articles/warwickplots.html) vignette.
+For further documentation, see the [Get started](https://warwick-stats-resources.github.io/warwickplots/articles/warwickplots.html) vignette.
