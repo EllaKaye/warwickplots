@@ -24,23 +24,32 @@ knitr::opts_chunk$set(
 An R package with colour palettes and themes that are consistent with The University of Warwick's [branding](https://warwick.ac.uk/about/brand/brand-guidelines/),
 especially its [colours](https://warwick.ac.uk/about/brand/brand-guidelines/colours/) and [typography](https://warwick.ac.uk/about/brand/brand-guidelines/typography/).
 
-The palettes are built using the [**palettes**](https://mccarthy-m-g.github.io/palettes/index.html) package. 
+The palettes are built using the [**palettes**](https://mccarthy-m-g.github.io/palettes/index.html) package.
+The ggplot2 theme is heavily inspired by the work of [Cara Thompson](https://www.cararthompson.com/), particularly this talk on [applying a unifying aesthetic to your plots](https://www.cararthompson.com/talks/nhsr2022-ggplot-themes/).
 
 ## Installation
 
 You can install the development version of warwickplots from [GitHub](https://github.com/) with:
 
 ``` r
-# install.packages("devtools")
-devtools::install_github("Warwick-Stats-Resources/warwickplots")
+# install.packages("remotes")
+remotes::install_github("Warwick-Stats-Resources/warwickplots")
 ```
 
-## Example
+## Palettes
+
+The package offers six colour palettes: one discrete, two divergent and three sequential:
+
+```{r palettes}
+library(warwickplots)
+plot(warwick_palettes)
+```
+
+## `theme_warwick`
 
 Below is a plot that uses the `warwick_palettes::primary` palette and `theme_warwick()`.
 
 ```{r example, warning=FALSE}
-library(warwickplots)
 library(ggplot2)
 library(palmerpenguins)
 ggplot(penguins, aes(flipper_length_mm, body_mass_g, group = species)) +

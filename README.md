@@ -16,7 +16,10 @@ and
 
 The palettes are built using the
 [**palettes**](https://mccarthy-m-g.github.io/palettes/index.html)
-package.
+package. The ggplot2 theme is heavily inspired by the work of [Cara
+Thompson](https://www.cararthompson.com/), particularly this talk on
+[applying a unifying aesthetic to your
+plots](https://www.cararthompson.com/talks/nhsr2022-ggplot-themes/).
 
 ## Installation
 
@@ -24,19 +27,30 @@ You can install the development version of warwickplots from
 [GitHub](https://github.com/) with:
 
 ``` r
-# install.packages("devtools")
-devtools::install_github("Warwick-Stats-Resources/warwickplots")
+# install.packages("remotes")
+remotes::install_github("Warwick-Stats-Resources/warwickplots")
 ```
 
-## Example
+## Palettes
 
-Below is a plot that uses the `warwick_palettes::primary` palette and
-`theme_warwick()`.
+The package offers six colour palettes: one discrete, two divergent and
+three sequential:
 
 ``` r
 library(warwickplots)
 #> Loading required package: palettes
 ```
+
+``` r
+plot(warwick_palettes)
+```
+
+![](man/figures/README-palettes-1.png)<!-- -->
+
+## `theme_warwick`
+
+Below is a plot that uses the `warwick_palettes::primary` palette and
+`theme_warwick()`.
 
 ``` r
 library(ggplot2)
