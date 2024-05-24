@@ -21,4 +21,7 @@ Depends:
 LazyData: true
 Suggests: 
     ggplot2,
-    ggtext
+    ggtext,
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr
