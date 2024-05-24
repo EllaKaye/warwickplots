@@ -10,7 +10,7 @@ knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>",
   fig.path = "man/figures/README-",
-  out.width = "100%",
+  #out.width = "100%",
   dev = "ragg_png",
   dpi = 300
 )
@@ -54,5 +54,10 @@ ggplot(penguins, aes(flipper_length_mm, body_mass_g, group = species)) +
   theme_warwick() +
   theme(legend.position = 'none')
 ```
+
+```{r echo = FALSE}
+knitr::include_graphics(here::here("man", "figures", "README-example-1.png"))
+```
+
 
 For further docuementation, see `vignette("warwickplots")`.

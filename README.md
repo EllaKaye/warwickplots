@@ -54,6 +54,8 @@ ggplot(penguins, aes(flipper_length_mm, body_mass_g, group = species)) +
 #> (`geom_point()`).
 ```
 
-<img src="man/figures/README-example-1.png" width="100%" />
+![](man/figures/README-example-1.png)<!-- -->
+
+<img src="man/figures/README-example-1.png" width="672" />
 
 For further docuementation, see `vignette("warwickplots")`.
