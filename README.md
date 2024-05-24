@@ -6,8 +6,6 @@
 <!-- badges: start -->
 <!-- badges: end -->
 
-# warwickplots
-
 A work-in-progress R package with palettes and themes that are
 consistent with The University of Warwick’s
 [branding](https://warwick.ac.uk/about/brand/brand-guidelines/),
