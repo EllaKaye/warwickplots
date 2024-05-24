@@ -4,8 +4,8 @@ Version: 0.0.0.9000
 Authors@R: 
     person("Ella", "Kaye", , "ella.m.kaye@warwick.ac.uk", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0002-7300-3718"))
-Description: Colour palettes and 'ggplot2' themes that are consistent with The 
-    University of Warwick's ID7 branding. Built using the 'palettes' package, 
+Description: Colour palettes and a 'ggplot2' theme that are consistent with The 
+    University of Warwick' branding. Built using the 'palettes' package, 
     which provides methods for printing, formatting, casting and coercion, 
     extraction and updating of components, plotting, colour mixing arithmetic, 
     and colour interpolation.
@@ -21,6 +21,4 @@ Depends:
 LazyData: true
 Suggests: 
     ggplot2,
-    ggtext,
-    ragg,
-    showtext
+    ggtext
