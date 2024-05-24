@@ -30,7 +30,8 @@ devtools::install_github("Warwick-Stats-Resources/warwickplots")
 
 ## Example
 
-Below is a plot that uses the `primary` palette and `theme_warwick()`.
+Below is a plot that uses the `warwick_palettes::primary` palette and
+`theme_warwick()`.
 
 ``` r
 library(warwickplots)
@@ -54,4 +55,5 @@ ggplot(penguins, aes(flipper_length_mm, body_mass_g, group = species)) +
 
 ![](man/figures/README-example-1.png)<!-- -->
 
-For further docuementation, see `vignette("warwickplots")`.
+For further documentation, see [Get started
+vignette](https://warwick-stats-resources.github.io/warwickplots/articles/warwickplots.html).
