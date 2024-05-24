@@ -28,7 +28,7 @@ theme_warwick <- function(base_size = 11) {
                                         size = ggplot2::rel(1.4),
                                         margin = ggplot2::margin(12, 0, 6, 0)),
     plot.title.position = "plot",
-    plot.subtitle = ggtext::element_textbox_simple(size = ggplot2::rel(1.1), margin = ggplot2::margin(4, 0, 4, 0)),
+    plot.subtitle = ggtext::element_textbox_simple(size = ggplot2::rel(1.1), margin = ggplot2::margin(4, 0, 6, 0)),
     axis.text.y = ggplot2::element_text(colour = mid_text),
     axis.title.y = ggplot2::element_text(size = base_size, margin = ggplot2::margin(r = 10)),
     axis.text.x = ggplot2::element_text(colour = mid_text, size = base_size),
