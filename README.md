@@ -55,5 +55,6 @@ ggplot(penguins, aes(flipper_length_mm, body_mass_g, group = species)) +
 
 ![](man/figures/README-example-1.png)<!-- -->
 
-For further documentation, see [Get started
-vignette](https://warwick-stats-resources.github.io/warwickplots/articles/warwickplots.html).
+For further documentation, see the [‘Get
+started’](https://warwick-stats-resources.github.io/warwickplots/articles/warwickplots.html)
+vignette.
