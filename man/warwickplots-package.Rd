@@ -6,12 +6,15 @@
 \alias{warwickplots-package}
 \title{warwickplots: Palettes and themes aligned with The University of Warwick's brand}
 \description{
+\if{html}{\figure{logo.png}{options: style='float: right' alt='logo' width='120'}}
+
 Colour palettes and a 'ggplot2' theme that are consistent with The University of Warwick' branding. Built using the 'palettes' package, which provides methods for printing, formatting, casting and coercion, extraction and updating of components, plotting, colour mixing arithmetic, and colour interpolation.
 }
 \seealso{
 Useful links:
 \itemize{
   \item \url{https://github.com/Warwick-Stats-Resources/warwickplots}
+  \item \url{https://warwick-stats-resources.github.io/warwickplots/}
   \item Report bugs at \url{https://github.com/Warwick-Stats-Resources/warwickplots/issues}
 }
 

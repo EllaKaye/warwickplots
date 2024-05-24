@@ -13,7 +13,7 @@ License: CC0
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.1
-URL: https://github.com/Warwick-Stats-Resources/warwickplots
+URL: https://github.com/Warwick-Stats-Resources/warwickplots, https://warwick-stats-resources.github.io/warwickplots/
 BugReports: https://github.com/Warwick-Stats-Resources/warwickplots/issues
 Depends: 
     palettes,
