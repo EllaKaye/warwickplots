@@ -13,6 +13,9 @@
 #' names(warwick_palettes)
 #'
 #' # Plot all palettes.
+#' plot(warwick_palettes)
+#'
+#' # Plot a specific palette
 #' plot(warwick_palettes$primary)
 "warwick_palettes"
 
