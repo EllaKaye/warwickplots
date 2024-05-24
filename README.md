@@ -35,6 +35,9 @@ Below is a plot that uses the `primary` palette and `theme_warwick()`.
 ``` r
 library(warwickplots)
 #> Loading required package: palettes
+```
+
+``` r
 library(ggplot2)
 library(palmerpenguins)
 ggplot(penguins, aes(flipper_length_mm, body_mass_g, group = species)) +
@@ -54,3 +57,21 @@ ggplot(penguins, aes(flipper_length_mm, body_mass_g, group = species)) +
 <img src="man/figures/README-example-1.png" width="100%" />
 
 For further docuementation, see `vignette("warwickplots")`.
+
+For comparision, plot without `theme_warwick()`:
+
+``` r
+ggplot(penguins, aes(flipper_length_mm, body_mass_g, group = species)) +
+  geom_point(aes(colour = species, shape = species), alpha = 0.8, size = 2) +
+  scale_color_palette_d(warwick_palettes$primary) +
+  labs(title = "Penguin Size, Palmer Station LTER",
+       subtitle = "Flipper length and body mass for **<span style = 'color:#3C1053;'>Adelie</span>**, **<span style = 'color:#6DCDB8;'>Chinstrap</span>** and **<span style = 'color:#CB333B;'>Gentoo</span>** Penguins",
+       caption = "Visualization: Ella Kaye, Data: Gorman, Williams & Fraser (2014) DOI: 10.1371/journal.pone.009008",
+       x = "flipper length (mm)",
+       y = "body mass (g)") +
+  theme(legend.position = 'none')
+#> Warning: Removed 2 rows containing missing values or values outside the scale range
+#> (`geom_point()`).
+```
+
+<img src="man/figures/README-unnamed-chunk-2-1.png" width="100%" />
