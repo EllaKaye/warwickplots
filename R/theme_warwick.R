@@ -1,6 +1,4 @@
-#showtext::font_add_google(name = "Lato", family = "Lato")
-
-#' ggplot2 theme
+#' ggplot2 theme consistent with Warwick Brand
 #'
 #' @param base_size numeric, base size for font
 #'

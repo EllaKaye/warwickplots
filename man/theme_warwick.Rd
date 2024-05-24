@@ -2,7 +2,7 @@
 % Please edit documentation in R/theme_warwick.R
 \name{theme_warwick}
 \alias{theme_warwick}
-\title{ggplot2 theme}
+\title{ggplot2 theme consistent with Warwick Brand}
 \usage{
 theme_warwick(base_size = 11)
 }
@@ -10,7 +10,7 @@ theme_warwick(base_size = 11)
 \item{base_size}{numeric, base size for font}
 }
 \description{
-ggplot2 theme
+ggplot2 theme consistent with Warwick Brand
 }
 \examples{
 \dontrun{

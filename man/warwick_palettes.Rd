@@ -6,7 +6,7 @@
 \alias{warwick_palettes_discrete}
 \alias{warwick_palettes_sequential}
 \alias{warwick_palettes_divergent}
-\title{University of Warwick palettes}
+\title{University of Warwick brand palettes}
 \format{
 \subsection{\code{warwick_palettes}}{
 
@@ -54,11 +54,13 @@ Palettes consistent with The University of Warwick's brand.
 # Get all palettes by name.
 names(warwick_palettes)
 
-# Plot all palettes.
-plot(warwick_palettes)
-
 # Plot a specific palette
 plot(warwick_palettes$primary)
+
+#' # Plot all palettes.
+\dontrun{
+plot(warwick_palettes)
+}
 }
 \seealso{
 \code{\link[=pal_palette]{pal_palette()}}, \code{\link[=pal_colour]{pal_colour()}}

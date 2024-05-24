@@ -1,4 +1,4 @@
-#' University of Warwick palettes
+#' University of Warwick brand palettes
 #'
 #' Palettes consistent with The University of Warwick's brand.
 #'
@@ -12,11 +12,13 @@
 #' # Get all palettes by name.
 #' names(warwick_palettes)
 #'
-#' # Plot all palettes.
-#' plot(warwick_palettes)
-#'
 #' # Plot a specific palette
 #' plot(warwick_palettes$primary)
+#'
+#' #' # Plot all palettes.
+#' \dontrun{
+#' plot(warwick_palettes)
+#' }
 "warwick_palettes"
 
 #' @rdname warwick_palettes
