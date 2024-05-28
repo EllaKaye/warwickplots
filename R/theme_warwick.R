@@ -11,22 +11,26 @@
 #'    theme_warwick()
 #' }
 
-theme_warwick <- function(base_size = 11) {
+theme_warwick <- function(base_size = 11, use = c("online", "print")) {
 
   dark_text <- "#303030"
   mid_text <-  "#595959"
   light_text <- "#AFAFAF"
   pale_text <- "#EBEBEB"
 
+  # choose appropiate font for usage
+  use = match.arg(use)
+  font <- ifelse(use == "online", "Lato", "Avenir Next")
+
   ggplot2::theme_minimal(base_size = base_size) +
     ggplot2::theme(text = ggplot2::element_text(colour = dark_text,
-                              lineheight = 1.1,
-                              family = "Lato"
+                                                lineheight = 1.1,
+                                                family = font
 
     ),
     plot.title = ggtext::element_textbox_simple(colour = dark_text,
-                                        size = ggplot2::rel(1.4),
-                                        margin = ggplot2::margin(12, 0, 6, 0)),
+                                                size = ggplot2::rel(1.4),
+                                                margin = ggplot2::margin(12, 0, 6, 0)),
     plot.title.position = "plot",
     plot.subtitle = ggtext::element_textbox_simple(size = ggplot2::rel(1.1), margin = ggplot2::margin(4, 0, 6, 0)),
     axis.text.y = ggplot2::element_text(colour = mid_text),
