@@ -54,11 +54,7 @@ To use either of the fonts, you first need to check if they are installed on you
 systemfonts::match_fonts(c("Lato", "Avenir Next"))
 ```
 
-If the paths in the tibble show Lato and Avenir Next, then they are installed on your system. If they show another font, i.e. your system default, then they are not. For example, if I ask for a font I don't have installed, I see that my system will default to using Helvetica: 
-
-```{r}
-systemfonts::match_fonts("non-existent-font")
-```
+If the paths in the tibble show Lato and Avenir Next, then they are installed on your system. If they show another font, i.e. your system default, then they are not. For example, in the environment in which this vignette is rendered, there is access to Lato, but not to Avenir Next. If I tried to set the font family for a plot to Avenir Next, it would display the default DejaVuSans instead.
 
 If you do not have Lato installed, you can install it, either directly from [Google Fonts](https://fonts.google.com/specimen/Lato?query=Lato) or using the [sysfonts](https://github.com/yixuan/sysfonts) package:
 
