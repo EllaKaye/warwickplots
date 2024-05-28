@@ -84,7 +84,77 @@
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/Warwick-Stats-Resources/warwickplots" class="external-link">warwickplots</a></span><span class="op">)</span></span>
 <span><span class="co">#&gt; Loading required package: palettes</span></span></code></pre></div>
-  </main>
+<div class="section level2">
+<h2 id="using-the-appropriate-font">Using the appropriate font<a class="anchor" aria-label="anchor" href="#using-the-appropriate-font"></a>
+</h2>
+<p>The University of Warwick’s <a href="https://warwick.ac.uk/about/brand/brand-guidelines/typography/" class="external-link">typography
+brand guidance</a> is to use the font Lato for all online text and the
+font Avenir Next for all print material. <code><a href="../reference/theme_warwick.html">theme_warwick()</a></code>
+has a <code>use</code> argument, that can be one of
+<code>"online"</code> or <code>"print"</code> (defaults to
+<code>"online"</code>), which will ensure the appropriate font for the
+use, <em>if</em> your system is set up for it, i.e. you have the fonts
+installed and the packages to render them in a plot.</p>
+<div class="section level3">
+<h3 id="setting-up-ragg">Setting up ragg<a class="anchor" aria-label="anchor" href="#setting-up-ragg"></a>
+</h3>
+<p>You need to have the <a href="https://ragg.r-lib.org" class="external-link">ragg</a>, <a href="https://github.com/r-lib/systemfonts" class="external-link">systemfonts</a>, and <a href="">textshaping</a> packages installed. Installing ragg should
+install the other two:</p>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">'ragg'</span><span class="op">)</span></span></code></pre></div>
+<p>You then need to ensure that whenever you output a plot, you do so
+using the <strong>AGG</strong> graphics device.</p>
+<ul>
+<li><p>In RStudio &gt;= 1.4, go to Tools -&gt; Global Options -&gt;
+General -&gt; Graphics and set the Backend to AGG.</p></li>
+<li><p>In Quarto, set the following YAML:<a class="footnote-ref" tabindex="0" data-bs-toggle="popover" data-bs-content='&lt;p&gt;This is already set as the default in &lt;a href="https://github.com/Warwick-Stats-Resources/warwickpres" class="external-link"&gt;warwickpres&lt;/a&gt;&lt;/p&gt;'><sup>1</sup></a></p></li>
+</ul>
+<pre><code><span>  <span class="va">knitr</span><span class="op">:</span></span>
+<span>    <span class="va">opts_chunk</span><span class="op">:</span> </span>
+<span>      <span class="va">dev</span><span class="op">:</span> <span class="st">"ragg_png"</span></span></code></pre>
+<ul>
+<li>In RMarkdown, use
+<code>knitr::opts_chunk$set(dev = "ragg_png")</code> at the top of a
+script.</li>
+</ul>
+</div>
+<div class="section level3">
+<h3 id="checking-the-fonts-are-installed">Checking the fonts are installed<a class="anchor" aria-label="anchor" href="#checking-the-fonts-are-installed"></a>
+</h3>
+<p>To use either of the fonts, you first need to check if they are
+installed on your system:</p>
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu">systemfonts</span><span class="fu">::</span><span class="fu"><a href="https://systemfonts.r-lib.org/reference/match_fonts.html" class="external-link">match_fonts</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"Lato"</span>, <span class="st">"Avenir Next"</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 2 × 3</span></span></span>
+<span><span class="co">#&gt;   path                                            index features  </span></span>
+<span><span class="co">#&gt;   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>                                           <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;list&gt;</span>    </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">1</span> /usr/share/fonts/truetype/lato/Lato-Regular.ttf     0 <span style="color: #949494;">&lt;font_ftr&gt;</span></span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">2</span> /usr/share/fonts/truetype/dejavu/DejaVuSans.ttf     0 <span style="color: #949494;">&lt;font_ftr&gt;</span></span></span></code></pre></div>
+<p>If the paths in the tibble show Lato and Avenir Next, then they are
+installed on your system. If they show another font, i.e. your system
+default, then they are not. For example, if I ask for a font I don’t
+have installed, I see that my system will default to using
+Helvetica:</p>
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu">systemfonts</span><span class="fu">::</span><span class="fu"><a href="https://systemfonts.r-lib.org/reference/match_fonts.html" class="external-link">match_fonts</a></span><span class="op">(</span><span class="st">"non-existent-font"</span><span class="op">)</span></span>
+<span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 1 × 3</span></span></span>
+<span><span class="co">#&gt;   path                                            index features  </span></span>
+<span><span class="co">#&gt;   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>                                           <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;list&gt;</span>    </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">1</span> /usr/share/fonts/truetype/dejavu/DejaVuSans.ttf     0 <span style="color: #949494;">&lt;font_ftr&gt;</span></span></span></code></pre></div>
+<p>If you do not have Lato installed, you can install it, either
+directly from <a href="https://fonts.google.com/specimen/Lato?query=Lato" class="external-link">Google
+Fonts</a> or using the <a href="https://github.com/yixuan/sysfonts" class="external-link">sysfonts</a> package:</p>
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu">sysfonts</span><span class="fu">::</span><span class="fu">font_add_google</span><span class="op">(</span><span class="st">"Lato"</span><span class="op">)</span></span></code></pre></div>
+<p>For further excellent, detailed guidance on setting up and working
+with custom fonts in R, see the <a href="https://www.cararthompson.com/posts/2024-01-12-using-fonts-in-r-for-dataviz/2024-01-12_getting-fonts-to-work#set-your-graphics-device-to-agg" class="external-link">getting
+fonts to work in R</a> post by Cara Thompson and the <a href="https://yjunechoe.github.io/posts/2021-06-24-setting-up-and-debugging-custom-fonts/" class="external-link">setting
+up and debugging custom fonts</a> post by June Choe.</p>
+</div>
+</div>
+
+  </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
+    </nav></aside>
 </div>
 
 
