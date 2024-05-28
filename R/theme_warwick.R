@@ -13,8 +13,8 @@
 
 theme_warwick <- function(base_size = 11) {
 
-  dark_text <- "#383838"
-  mid_text <-  "#878787"
+  dark_text <- "#303030"
+  mid_text <-  "#595959"
   light_text <- "#AFAFAF"
   pale_text <- "#EBEBEB"
 
@@ -36,6 +36,7 @@ theme_warwick <- function(base_size = 11) {
     legend.position = "top",
     legend.justification = 1,
     panel.grid = ggplot2::element_line(colour = pale_text),
-    plot.caption = ggplot2::element_text(size = ggplot2::rel(0.8), margin = ggplot2::margin(t = 12)),
+    plot.caption = ggplot2::element_text(color = mid_text, size = ggplot2::rel(0.8), margin = ggplot2::margin(t = 12)),
+    plot.caption.position = "plot",
     plot.margin = ggplot2::margin(0.25, 0.25, 0.25, 0.25,"cm"))
 }
