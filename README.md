@@ -16,8 +16,8 @@ and
 [typography](https://warwick.ac.uk/about/brand/brand-guidelines/typography/).
 
 The palettes are built using the
-[**palettes**](https://mccarthy-m-g.github.io/palettes/index.html)
-package. The ggplot2 theme is heavily inspired by the work of [Cara
+[palettes](https://mccarthy-m-g.github.io/palettes/index.html) package.
+The ggplot2 theme is heavily inspired by the work of [Cara
 Thompson](https://www.cararthompson.com/), particularly this talk on
 [applying a unifying aesthetic to your
 plots](https://www.cararthompson.com/talks/nhsr2022-ggplot-themes/).
@@ -53,7 +53,7 @@ For further details on using the palettes, please see the
 vignette and the documentation for the
 [palettes](https://mccarthy-m-g.github.io/palettes/index.html) package.
 
-## `theme_warwick`
+## `theme_warwick()`
 
 Below is a plot that uses the `warwick_palettes::primary` palette and
 `theme_warwick()`.
@@ -83,7 +83,8 @@ offering the following in addition:
 - Uses `ggtext::element_textbox_simple()` for the plot title and
   subtitle, to enable use of markdown and CSS styling, and text-wrapping
   if the title/subtitle is long
-- Uses Lato font, *if* your system is set up for it
+- Uses Lato or Avenir Next font (for online or print use respectively),
+  *if* your system is set up for it
 
 Note that any `theme_warwick()` defaults can be overridden with a
 subsequent call to `theme()`.
