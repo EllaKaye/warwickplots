@@ -75,7 +75,7 @@
 <!-- badges: start -->
 <!-- badges: end -->
 <p>An R package with colour palettes and a <a href="https://ggplot2.tidyverse.org" class="external-link">ggplot2</a> theme that are consistent with The University of Warwick’s <a href="https://warwick.ac.uk/about/brand/brand-guidelines/" class="external-link">branding</a>, especially its <a href="https://warwick.ac.uk/about/brand/brand-guidelines/colours/" class="external-link">colours</a> and <a href="https://warwick.ac.uk/about/brand/brand-guidelines/typography/" class="external-link">typography</a>.</p>
-<p>The palettes are built using the <a href="https://mccarthy-m-g.github.io/palettes/index.html" class="external-link"><strong>palettes</strong></a> package. The ggplot2 theme is heavily inspired by the work of <a href="https://www.cararthompson.com/" class="external-link">Cara Thompson</a>, particularly this talk on <a href="https://www.cararthompson.com/talks/nhsr2022-ggplot-themes/" class="external-link">applying a unifying aesthetic to your plots</a>.</p>
+<p>The palettes are built using the <a href="https://mccarthy-m-g.github.io/palettes/index.html" class="external-link">palettes</a> package. The ggplot2 theme is heavily inspired by the work of <a href="https://www.cararthompson.com/" class="external-link">Cara Thompson</a>, particularly this talk on <a href="https://www.cararthompson.com/talks/nhsr2022-ggplot-themes/" class="external-link">applying a unifying aesthetic to your plots</a>.</p>
 <div class="section level2">
 <h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
 </h2>
@@ -98,7 +98,7 @@
 </div>
 <div class="section level2">
 <h2 id="theme_warwick">
-<code>theme_warwick</code><a class="anchor" aria-label="anchor" href="#theme_warwick"></a>
+<code>theme_warwick()</code><a class="anchor" aria-label="anchor" href="#theme_warwick"></a>
 </h2>
 <p>Below is a plot that uses the <code>warwick_palettes::primary</code> palette and <code><a href="reference/theme_warwick.html">theme_warwick()</a></code>.</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
@@ -120,7 +120,7 @@
 <li>Text hierarchy, with different sizes and colours</li>
 <li>Spacing, giving the text room to breathe</li>
 <li>Uses <code><a href="https://wilkelab.org/ggtext/reference/element_textbox.html" class="external-link">ggtext::element_textbox_simple()</a></code> for the plot title and subtitle, to enable use of markdown and CSS styling, and text-wrapping if the title/subtitle is long</li>
-<li>Uses Lato font, <em>if</em> your system is set up for it</li>
+<li>Uses Lato or Avenir Next font (for online or print use respectively), <em>if</em> your system is set up for it</li>
 </ul>
 <p>Note that any <code><a href="reference/theme_warwick.html">theme_warwick()</a></code> defaults can be overridden with a subsequent call to <code><a href="https://ggplot2.tidyverse.org/reference/theme.html" class="external-link">theme()</a></code>.</p>
 <p>For further details, including how to ensure your system is set up to use Lato, see the <a href="https://warwick-stats-resources.github.io/warwickplots/articles/warwickplots.html">warwickplots</a> vignette.</p>
