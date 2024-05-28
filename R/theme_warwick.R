@@ -1,6 +1,7 @@
 #' ggplot2 theme consistent with Warwick Brand
 #'
 #' @param base_size numeric, base size for font
+#' @param use character, one of "online" or "print" (defaults to "online"), which determines which font is used
 #'
 #' @export
 #'

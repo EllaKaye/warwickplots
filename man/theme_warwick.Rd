@@ -4,10 +4,12 @@
 \alias{theme_warwick}
 \title{ggplot2 theme consistent with Warwick Brand}
 \usage{
-theme_warwick(base_size = 11)
+theme_warwick(base_size = 11, use = c("online", "print"))
 }
 \arguments{
 \item{base_size}{numeric, base size for font}
+
+\item{use}{character, one of "online" or "print" (defaults to "online"), which determines which font is used}
 }
 \description{
 ggplot2 theme consistent with Warwick Brand
