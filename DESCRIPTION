@@ -19,9 +19,12 @@ Depends:
     palettes,
     R (>= 2.10)
 LazyData: true
-Suggests: 
-    ggplot2,
-    ggtext,
-    knitr,
-    rmarkdown
 VignetteBuilder: knitr
+Imports: 
+    ggplot2,
+    ggtext
+Suggests: 
+    knitr,
+    rmarkdown,
+    ragg,
+    systemfonts
