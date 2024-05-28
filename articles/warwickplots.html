@@ -132,19 +132,14 @@ installed on your system:</p>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;">2</span> /usr/share/fonts/truetype/dejavu/DejaVuSans.ttf     0 <span style="color: #949494;">&lt;font_ftr&gt;</span></span></span></code></pre></div>
 <p>If the paths in the tibble show Lato and Avenir Next, then they are
 installed on your system. If they show another font, i.e. your system
-default, then they are not. For example, if I ask for a font I don’t
-have installed, I see that my system will default to using
-Helvetica:</p>
-<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">systemfonts</span><span class="fu">::</span><span class="fu"><a href="https://systemfonts.r-lib.org/reference/match_fonts.html" class="external-link">match_fonts</a></span><span class="op">(</span><span class="st">"non-existent-font"</span><span class="op">)</span></span>
-<span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 1 × 3</span></span></span>
-<span><span class="co">#&gt;   path                                            index features  </span></span>
-<span><span class="co">#&gt;   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>                                           <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;list&gt;</span>    </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">1</span> /usr/share/fonts/truetype/dejavu/DejaVuSans.ttf     0 <span style="color: #949494;">&lt;font_ftr&gt;</span></span></span></code></pre></div>
+default, then they are not. For example, in the environment in which
+this vignette is rendered, there is access to Lato, but not to Avenir
+Next. If I tried to set the font family for a plot to Avenir Next, it
+would display the default DejaVuSans instead.</p>
 <p>If you do not have Lato installed, you can install it, either
 directly from <a href="https://fonts.google.com/specimen/Lato?query=Lato" class="external-link">Google
 Fonts</a> or using the <a href="https://github.com/yixuan/sysfonts" class="external-link">sysfonts</a> package:</p>
-<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu">sysfonts</span><span class="fu">::</span><span class="fu">font_add_google</span><span class="op">(</span><span class="st">"Lato"</span><span class="op">)</span></span></code></pre></div>
 <p>For further excellent, detailed guidance on setting up and working
 with custom fonts in R, see the <a href="https://www.cararthompson.com/posts/2024-01-12-using-fonts-in-r-for-dataviz/2024-01-12_getting-fonts-to-work#set-your-graphics-device-to-agg" class="external-link">getting
