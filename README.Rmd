@@ -6,17 +6,13 @@ output: github_document
 
 ```{r, include = FALSE}
 library(ragg)
-
-ragg_png <- function(..., res = 300) {
-  ragg::agg_png(..., res = res, units = "in")
-}
-
 knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>",
   fig.path = "man/figures/README-",
   #out.width = "100%",
-  dev = "ragg_png"
+  dev = "ragg_png",
+  dpi = 300
 )
 ```
 
@@ -80,4 +76,4 @@ ggplot(penguins, aes(flipper_length_mm, body_mass_g, group = species)) +
 
 Note that any `theme_warwick()` defaults can be overridden with a subsequent call to `theme()`.
 
-For further details, including how to ensure your system is set up to use Lato, see the [warwickplots](https://warwick-stats-resources.github.io/warwickplots/articles/warwickplots.html) vignette.
+For further details, including how to ensure your system is set up to use custom fonts, see the [warwickplots](https://warwick-stats-resources.github.io/warwickplots/articles/warwickplots.html) vignette.

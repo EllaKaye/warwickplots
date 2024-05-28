@@ -90,6 +90,6 @@ Note that any `theme_warwick()` defaults can be overridden with a
 subsequent call to `theme()`.
 
 For further details, including how to ensure your system is set up to
-use Lato, see the
+use custom fonts, see the
 [warwickplots](https://warwick-stats-resources.github.io/warwickplots/articles/warwickplots.html)
 vignette.
