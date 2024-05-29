@@ -38,7 +38,7 @@ library(warwickplots)
 plot(warwick_palettes)
 ```
 
-`warwick_palettes` is essentially a list, and so individual palettes can be accessed by name:
+`warwick_palettes` is essentially a list, and so individual palettes can be accessed by name:^[In the RStudio IDE and in the [online vignette](https://warwick-stats-resources.github.io/warwickplots/articles/warwickplots.html), the print method for palettes shows each bullet point in the relevant colour, but in the vignette built for R, all the bullet points are the same (blue) colour.]
 
 ```{r}
 warwick_palettes$primary
