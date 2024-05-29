@@ -23,6 +23,47 @@ knitr::opts_chunk$set(
 library(warwickplots)
 ```
 
+warwickplots is an R package with colour palettes and a [ggplot2](https://ggplot2.tidyverse.org) theme that are consistent with The University of Warwick's [branding](https://warwick.ac.uk/about/brand/brand-guidelines/),
+especially its [colours](https://warwick.ac.uk/about/brand/brand-guidelines/colours/) and [typography](https://warwick.ac.uk/about/brand/brand-guidelines/typography/).
+
+The palettes are built using the [palettes](https://mccarthy-m-g.github.io/palettes/index.html) package.
+The ggplot2 theme is heavily inspired by the work of [Cara Thompson](https://www.cararthompson.com/), particularly this talk on [applying a unifying aesthetic to your plots](https://www.cararthompson.com/talks/nhsr2022-ggplot-themes/).
+
+## The palettes
+
+The package offers six colour palettes: one discrete, two divergent and three sequential:
+
+```{r palettes}
+library(warwickplots)
+plot(warwick_palettes)
+```
+
+`warwick_palettes` is essentially a list, and so individual palettes can be accessed by name:
+
+```{r}
+warwick_palettes$primary
+```
+Each palette is essentially a vector, so can be subsetted in the usual way to create new palettes:
+
+```{r}
+warwick_palettes$primary[c(1, 3, 5)]
+```
+The palettes package provides a `palettes::pal_ramp()` function for interpolating between colours. For example, consider the `warwick_palettes$aubergine` palette:
+
+```{r}
+plot(warwick_palettes$aubergine)
+```
+
+To generate a new palette of eight colour values between the darkest and mid-point of the full palette, and reverse it, we can do the following:
+
+```{r}
+ends <- warwick_palettes$aubergine[c(1, 4)] # get new end-points
+pal_ramp(ends, n = 8, direction = -1) |> plot()
+```
+
+
+HOW TO USE THEM IN GGPLOT2
+
 ## Using the appropriate font
 The University of Warwick's [typography brand guidance](https://warwick.ac.uk/about/brand/brand-guidelines/typography/) is to use the font Lato for all online text and the font Avenir Next for all print material. `theme_warwick()` has a `use` argument, that can be one of `"online"` or `"print"` (defaults to `"online"`), which will ensure the appropriate font for the use, *if* your system is set up for it, i.e. you have the fonts installed and the packages to render them in a plot.
 
