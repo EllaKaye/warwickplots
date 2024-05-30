@@ -49,7 +49,7 @@ p
 
 #### Discrete
 
-Use `scale_colour_palette_d()` and `scale_fill_palette_d()` for discrete scales.
+Use `scale_colour_palette_d()` and `scale_fill_palette_d()` for discrete scales:
 
 ```{r}
 p +
@@ -78,7 +78,7 @@ ggplot(diamonds[sample(nrow(diamonds), 1000), ], aes(carat, price)) +
   scale_colour_palette_d(warwick_palettes$aubergine)
 ```
 
-Use `scale_colour_palette_c()` and `scale_fill_palette_c()` for continuous scales and `scale_colour_palette_b()` and `scale_fill_palette_b()` for binned scales.
+Use `scale_colour_palette_c()` and `scale_fill_palette_c()` for continuous scales and `scale_colour_palette_b()` and `scale_fill_palette_b()` for binned scales:
 
 ```{r}
 eruptions <- ggplot(faithfuld, aes(waiting, eruptions, fill = density)) +
@@ -93,7 +93,7 @@ eruptions +
 
 #### Divergent
 
-To demonstrate the divergent palettes, I'll first generate some synthetic data to plot on a map:
+To demonstrate the divergent palettes, let's first generate some synthetic data to plot on a map:
 
 ```{r}
 library(maps)
@@ -127,7 +127,7 @@ map_p +
   scale_fill_palette_c(warwick_palettes$aubergine_ruby)
 ```
 
-By default, the fill scale’s mid-point is the mean of the groups. If we want it to be zero, we can use the rescaler argument in `ggplot2::continuous_scale()`, which accepts a function used to scale the input values to the range [0, 1], to scale the fill values to have a mid-point of zero. For scaling the mid-point use `scales::rescale_mid()`.
+By default, the fill scale’s mid-point is the mean of the groups. If we want it to be zero, we can use the rescaler argument in `ggplot2::continuous_scale()`, which accepts a function used to scale the input values to the range [0, 1], to scale the fill values to have a mid-point of zero. For scaling the mid-point use `scales::rescale_mid()`:
 
 ```{r}
 map_p +
