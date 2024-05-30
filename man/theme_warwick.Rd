@@ -12,12 +12,27 @@ theme_warwick(base_size = 11, use = c("online", "print"))
 \item{use}{character, one of "online" or "print" (defaults to "online"), which determines which font is used}
 }
 \description{
-ggplot2 theme consistent with Warwick Brand
+\code{theme_warwick()} is an extension of \code{ggplot2::theme_minimal()}. See Details.
+}
+\details{
+\code{theme_warwick()} is an extension of \code{ggplot2::theme_minimal()}, offering the
+following in addition:
+\itemize{
+\item Spacing, giving the text room to breathe
+\item Uses \code{ggtext::element_textbox_simple()} for the plot title and subtitle, to enable use of markdown and CSS styling, and text-wrapping if the title/subtitle is long
+\item Uses Lato or Avenir Next font (for online or print use respectively), \emph{if} your system is set up for it
+}
+
+Note that any \code{theme_warwick()} defaults can be overridden with a subsequent call to \code{theme()}.
+
+For further details, including how to ensure your system is set up to use custom fonts, see the \href{https://warwick-stats-resources.github.io/warwickplots/articles/warwickplots.html}{warwickplots} vignette.
+For more examples, see the \href{https://warwick-stats-resources.github.io/warwickplots/articles/examples.html}{examples} vignette.
 }
 \examples{
 \dontrun{
-ggplot2::ggplot(ggplot2::mpg, ggplot2::aes(cty, hwy)) +
+ggplot2::ggplot(mtcars, ggplot2::aes(mpg, wt)) +
    ggplot2::geom_point() +
+   ggplot2::labs(title = "A demo plot") +
    theme_warwick()
 }
 }

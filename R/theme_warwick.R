@@ -1,5 +1,20 @@
 #' ggplot2 theme consistent with Warwick Brand
 #'
+#' `theme_warwick()` is an extension of `ggplot2::theme_minimal()`. See Details.
+#'
+#' `theme_warwick()` is an extension of `ggplot2::theme_minimal()`, offering the
+#' following in addition:
+#'
+# '- Text hierarchy, with different sizes and colours
+#' - Spacing, giving the text room to breathe
+#' - Uses `ggtext::element_textbox_simple()` for the plot title and subtitle, to enable use of markdown and CSS styling, and text-wrapping if the title/subtitle is long
+#' - Uses Lato or Avenir Next font (for online or print use respectively), *if* your system is set up for it
+#'
+#' Note that any `theme_warwick()` defaults can be overridden with a subsequent call to `theme()`.
+#'
+#' For further details, including how to ensure your system is set up to use custom fonts, see the [warwickplots](https://warwick-stats-resources.github.io/warwickplots/articles/warwickplots.html) vignette.
+#' For more examples, see the [examples](https://warwick-stats-resources.github.io/warwickplots/articles/examples.html) vignette.
+#'
 #' @param base_size numeric, base size for font
 #' @param use character, one of "online" or "print" (defaults to "online"), which determines which font is used
 #'
@@ -7,8 +22,9 @@
 #'
 #' @examples
 #' \dontrun{
-#' ggplot2::ggplot(ggplot2::mpg, ggplot2::aes(cty, hwy)) +
+#' ggplot2::ggplot(mtcars, ggplot2::aes(mpg, wt)) +
 #'    ggplot2::geom_point() +
+#'    ggplot2::labs(title = "A demo plot") +
 #'    theme_warwick()
 #' }
 
@@ -36,7 +52,7 @@ theme_warwick <- function(base_size = 11, use = c("online", "print")) {
     plot.subtitle = ggtext::element_textbox_simple(size = ggplot2::rel(1.1), margin = ggplot2::margin(4, 0, 6, 0)),
     axis.text.y = ggplot2::element_text(colour = mid_text),
     axis.title.y = ggplot2::element_text(size = base_size, margin = ggplot2::margin(r = 10)),
-    axis.text.x = ggplot2::element_text(colour = mid_text, size = base_size),
+    axis.text.x = ggplot2::element_text(colour = mid_text),
     axis.title.x = ggplot2::element_text(size = base_size, margin = ggplot2::margin(t = 10)),
     legend.position = "top",
     legend.justification = 1,
