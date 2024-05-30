@@ -4,7 +4,7 @@ pkgdown_sha: ~
 articles:
   ggplot2: ggplot2.html
   warwickplots: warwickplots.html
-last_built: 2024-05-30T08:43Z
+last_built: 2024-05-30T09:02Z
 urls:
   reference: https://warwick-stats-resources.github.io/warwickplots/reference
   article: https://warwick-stats-resources.github.io/warwickplots/articles
