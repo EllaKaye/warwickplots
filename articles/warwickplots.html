@@ -49,6 +49,12 @@
 <li class="nav-item">
   <a class="nav-link" href="../reference/index.html">Reference</a>
 </li>
+<li class="nav-item dropdown">
+  <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown-articles">Articles</a>
+  <div class="dropdown-menu" aria-labelledby="dropdown-articles">
+    <a class="dropdown-item" href="../articles/ggplot2.html">Using warwickplots with ggplot2</a>
+  </div>
+</li>
       </ul>
 <form class="form-inline my-2 my-lg-0" role="search">
         <input type="search" class="form-control me-sm-2" aria-label="Toggle navigation" name="search-input" data-search-index="../search.json" id="search-input" placeholder="Search for" autocomplete="off">
@@ -130,14 +136,38 @@ function for interpolating between colours. For example, consider the
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">warwick_palettes</span><span class="op">$</span><span class="va">aubergine</span><span class="op">)</span></span></code></pre></div>
 <p><img src="warwickplots_files/figure-html/unnamed-chunk-4-1.png" width="700"></p>
-<p>To generate a new palette of eight colour values between the darkest
-and mid-point of the full palette, and reverse it, we can do the
-following:</p>
+<p>To generate a new palette of five colour values between the darkest
+and mid-point of the full palette, and reverse it (then visualise it),
+we can do the following:</p>
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">ends</span> <span class="op">&lt;-</span> <span class="va">warwick_palettes</span><span class="op">$</span><span class="va">aubergine</span><span class="op">[</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">4</span><span class="op">)</span><span class="op">]</span> <span class="co"># get new end-points</span></span>
-<span><span class="fu"><a href="https://mccarthy-m-g.github.io/palettes/reference/pal_ramp.html" class="external-link">pal_ramp</a></span><span class="op">(</span><span class="va">ends</span>, n <span class="op">=</span> <span class="fl">8</span>, direction <span class="op">=</span> <span class="op">-</span><span class="fl">1</span><span class="op">)</span> <span class="op">|&gt;</span> <span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
+<span><span class="fu"><a href="https://mccarthy-m-g.github.io/palettes/reference/pal_ramp.html" class="external-link">pal_ramp</a></span><span class="op">(</span><span class="va">ends</span>, n <span class="op">=</span> <span class="fl">5</span>, direction <span class="op">=</span> <span class="op">-</span><span class="fl">1</span><span class="op">)</span> <span class="op">|&gt;</span> <span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
 <p><img src="warwickplots_files/figure-html/unnamed-chunk-5-1.png" width="700"></p>
-<p>HOW TO USE THEM IN GGPLOT2</p>
+<p>For more on methods for working with palettes, see the <a href="https://mccarthy-m-g.github.io/palettes/articles/palettes.html" class="external-link">palettes</a>
+vignette in the palettes package.</p>
+</div>
+<div class="section level2">
+<h2 id="using-palettes-in-ggplot2">Using palettes in ggplot2<a class="anchor" aria-label="anchor" href="#using-palettes-in-ggplot2"></a>
+</h2>
+<p>The palettes package provides colour and fill scales for using its
+palettes in ggplot2. These are:</p>
+<ul>
+<li><code><a href="https://mccarthy-m-g.github.io/palettes/reference/scale_colour_palette_d.html" class="external-link">scale_colour_palette_d()</a></code></li>
+<li><code><a href="https://mccarthy-m-g.github.io/palettes/reference/scale_colour_palette_d.html" class="external-link">scale_colour_palette_c()</a></code></li>
+<li><code><a href="https://mccarthy-m-g.github.io/palettes/reference/scale_colour_palette_d.html" class="external-link">scale_colour_palette_c()</a></code></li>
+<li><code><a href="https://mccarthy-m-g.github.io/palettes/reference/scale_colour_palette_d.html" class="external-link">scale_fill_palette_d()</a></code></li>
+<li><code><a href="https://mccarthy-m-g.github.io/palettes/reference/scale_colour_palette_d.html" class="external-link">scale_fill_palette_c()</a></code></li>
+<li><code><a href="https://mccarthy-m-g.github.io/palettes/reference/scale_colour_palette_d.html" class="external-link">scale_fill_palette_c()</a></code></li>
+</ul>
+<p>The <code>_d</code> variants are for discrete scales, the
+<code>_c</code> variants are for continuous scales and the
+<code>_b</code> variants are for binned scales.</p>
+<p>See the <a href="https://mccarthy-m-g.github.io/palettes/articles/ggplot2.html" class="external-link">using
+palettes with ggplot2</a> vignette in the palettes package for more
+information. The palettes package also has vignettes demonstrating how
+to use palettes with the <a href="https://gt.rstudio.com" class="external-link">gt</a> package
+and the <a href="https://chris-prener.github.io/biscale/" class="external-link">biscale</a>
+package.</p>
 </div>
 <div class="section level2">
 <h2 id="using-the-appropriate-font">Using the appropriate font<a class="anchor" aria-label="anchor" href="#using-the-appropriate-font"></a>
@@ -201,6 +231,10 @@ with custom fonts in R, see the <a href="https://www.cararthompson.com/posts/202
 fonts to work in R</a> post by Cara Thompson and the <a href="https://yjunechoe.github.io/posts/2021-06-24-setting-up-and-debugging-custom-fonts/" class="external-link">setting
 up and debugging custom fonts</a> post by June Choe.</p>
 </div>
+</div>
+<div class="section level2">
+<h2 id="overriding-theme_warwick">Overriding <code>theme_warwick()</code><a class="anchor" aria-label="anchor" href="#overriding-theme_warwick"></a>
+</h2>
 </div>
 
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
