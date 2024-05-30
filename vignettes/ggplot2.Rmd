@@ -143,7 +143,7 @@ new_p <- p +
 new_p
 ```
 
-We can now use `theme()` to make further adjustments to the appearance of the plot. Now that we have colour for the different species in the subtitle, we no longer need the legend. Let's alter some of the text. Note that because the title is set in `theme_warwick()` as a `ggtext::element_textbox_simple()`, you need to use that in the subsequent call to theme, whereas for make the text bigger for the caption, you just need the standard `ggplot2::element_text()`.
+We can now use `theme()` to make further adjustments to the appearance of the plot. Now that we have colour for the different species in the subtitle, we no longer need the legend. Let's alter some of the text. Note that because the title is set in `theme_warwick()` as a `ggtext::element_textbox_simple()`, you need to use that in the subsequent call to theme, whereas for make the text bigger for the caption, you just need the standard `ggplot2::element_text()`:
 
 ```{r}
 new_p + 
@@ -153,4 +153,13 @@ new_p +
         )
 ```
 
-Note here that 
+Note here that the title and subtitle now have less space between them. This is because, in `theme_warwick()` the spacing is defined in the definition of `plot.title` and that has now been overwritten, so we need to put it back. We can inspect the source code by calling `theme_warwick` in the console (without the parentheses), or with `View(theme_warwick)`. We can then see the whole definition of `plot.title` and put the definition of `margin` back in. The colour can stay as is:
+
+```{r}
+new_p + 
+  theme(legend.position = "none",
+        plot.title = ggtext::element_textbox_simple(                                                    size = ggplot2::rel(1.6),
+           margin = ggplot2::margin(12, 0, 6, 0)),
+        plot.caption = element_text(colour = "#CB333B")
+  )
+```
