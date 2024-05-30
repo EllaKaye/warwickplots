@@ -4,6 +4,8 @@
 # warwickplots <img src="man/figures/logo.png" align="right" height="138" alt="" />
 
 <!-- badges: start -->
+
+[![R-CMD-check](https://github.com/Warwick-Stats-Resources/warwickplots/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/Warwick-Stats-Resources/warwickplots/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 An R package with colour palettes and a
