@@ -20,6 +20,7 @@ following in addition:
 \itemize{
 \item Spacing, giving the text room to breathe
 \item Uses \code{ggtext::element_textbox_simple()} for the plot title and subtitle, to enable use of markdown and CSS styling, and text-wrapping if the title/subtitle is long
+\item Places the legend above the plot
 \item Uses Lato or Avenir Next font (for online or print use respectively), \emph{if} your system is set up for it
 }
 

@@ -8,6 +8,7 @@
 # '- Text hierarchy, with different sizes and colours
 #' - Spacing, giving the text room to breathe
 #' - Uses `ggtext::element_textbox_simple()` for the plot title and subtitle, to enable use of markdown and CSS styling, and text-wrapping if the title/subtitle is long
+#' - Places the legend above the plot
 #' - Uses Lato or Avenir Next font (for online or print use respectively), *if* your system is set up for it
 #'
 #' Note that any `theme_warwick()` defaults can be overridden with a subsequent call to `theme()`.
