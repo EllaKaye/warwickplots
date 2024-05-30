@@ -1,8 +1,8 @@
 ---
-title: "warwickplots"
+title: "Getting started with warwickplots"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{warwickplots}
+  %\VignetteIndexEntry{Getting started with warwickplots}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
@@ -76,7 +76,8 @@ The palettes package provides colour and fill scales for using its palettes in g
 
 The `_d` variants are for discrete scales, the `_c` variants are for continuous scales and the `_b` variants are for binned scales.
 
-See the [using palettes with ggplot2](https://mccarthy-m-g.github.io/palettes/articles/ggplot2.html) vignette in the palettes package for more information. The palettes package also has vignettes demonstrating how to use palettes with the [gt](https://gt.rstudio.com) package and the [biscale](https://chris-prener.github.io/biscale/) package.
+
+See the [using warwickplots with ggplot2](https://warwick-stats-resources.github.io/warwickplots/articles/ggplot2.html) vignettes for more information and examples and also the [using palettes with ggplot2](https://mccarthy-m-g.github.io/palettes/articles/ggplot2.html) vignette in the palettes package. The palettes package also has vignettes demonstrating how to use palettes with the [gt](https://gt.rstudio.com) package and the [biscale](https://chris-prener.github.io/biscale/) package.
 
 ## Using the appropriate font
 The University of Warwick's [typography brand guidance](https://warwick.ac.uk/about/brand/brand-guidelines/typography/) is to use the font Lato for all online text and the font Avenir Next for all print material. `theme_warwick()` has a `use` argument, that can be one of `"online"` or `"print"` (defaults to `"online"`), which will ensure the appropriate font for the use, *if* your system is set up for it, i.e. you have the fonts installed and the packages to render them in a plot.

@@ -29,4 +29,6 @@ Suggests:
     ragg,
     systemfonts,
     dplyr,
-    palmerpenguins
+    palmerpenguins,
+    maps,
+    scales
