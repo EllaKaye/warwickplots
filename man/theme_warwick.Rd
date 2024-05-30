@@ -26,7 +26,7 @@ following in addition:
 Note that any \code{theme_warwick()} defaults can be overridden with a subsequent call to \code{theme()}.
 
 For further details, including how to ensure your system is set up to use custom fonts, see the \href{https://warwick-stats-resources.github.io/warwickplots/articles/warwickplots.html}{warwickplots} vignette.
-For more examples, see the \href{https://warwick-stats-resources.github.io/warwickplots/articles/examples.html}{examples} vignette.
+For more examples, see the \href{https://warwick-stats-resources.github.io/warwickplots/articles/ggplot2.html}{using warwickplots with ggplot2} vignette.
 }
 \examples{
 \dontrun{

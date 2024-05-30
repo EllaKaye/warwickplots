@@ -28,4 +28,5 @@ Suggests:
     rmarkdown,
     ragg,
     systemfonts,
-    dplyr
+    dplyr,
+    palmerpenguins

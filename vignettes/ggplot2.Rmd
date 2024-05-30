@@ -1,0 +1,70 @@
+---
+title: "Using warwickplots with ggplot2"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{ggplot2}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  warning = FALSE
+)
+```
+
+```{r setup}
+library(warwickplots)
+library(ggplot2)
+library(palmerpenguins)
+```
+
+Below are several example plots, made with [ggplot2](https://ggplot2.tidyverse.org) demonstrating the usage of the various palettes in `warwick_palettes` and `theme_warwick()`.
+
+First, let's define a starting plot:
+
+```{r}
+p <- ggplot(penguins, aes(flipper_length_mm, body_mass_g, group = species)) +
+  geom_point(aes(colour = species, shape = species), alpha = 0.8, size = 2) +
+  labs(title = "Penguin Size, Palmer Station LTER",
+       caption = "Visualization: Ella Kaye",
+       x = "flipper length (mm)",
+       y = "body mass (g)") +
+  theme_warwick()
+  
+p
+```
+
+## Using colour and fill scales
+
+### Discrete
+
+```{r}
+p +
+  scale_colour_palette_d(warwick_palettes$primary) 
+```
+
+```{r}
+p +
+  scale_colour_palette_d(warwick_palettes$primary[c(1, 3, 5)]) 
+```
+
+```{r}
+mpg |> 
+  dplyr::filter(class != "2seater") |> 
+  ggplot(aes(y = fl, fill = class)) +
+    geom_bar() +
+    scale_fill_palette_d(warwick_palettes$primary) +
+    theme_warwick()
+```
+
+
+
+
+
+
+
+
+

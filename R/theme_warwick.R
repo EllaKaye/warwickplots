@@ -13,7 +13,7 @@
 #' Note that any `theme_warwick()` defaults can be overridden with a subsequent call to `theme()`.
 #'
 #' For further details, including how to ensure your system is set up to use custom fonts, see the [warwickplots](https://warwick-stats-resources.github.io/warwickplots/articles/warwickplots.html) vignette.
-#' For more examples, see the [examples](https://warwick-stats-resources.github.io/warwickplots/articles/examples.html) vignette.
+#' For more examples, see the [using warwickplots with ggplot2](https://warwick-stats-resources.github.io/warwickplots/articles/ggplot2.html) vignette.
 #'
 #' @param base_size numeric, base size for font
 #' @param use character, one of "online" or "print" (defaults to "online"), which determines which font is used
