@@ -62,14 +62,12 @@ p +
 ```
 
 ```{r}
-mpg_p <- mpg |> 
+mpg |> 
   filter(class != "2seater") |> 
   ggplot(aes(y = fl, fill = class)) +
     geom_bar() +
     scale_fill_palette_d(warwick_palettes$primary) +
     theme_warwick()
-
-mpg_p
 ```
 
 #### Sequential
@@ -86,8 +84,11 @@ Use `scale_colour_palette_c()` and `scale_fill_palette_c()` for continuous scale
 eruptions <- ggplot(faithfuld, aes(waiting, eruptions, fill = density)) +
   geom_tile()
 
-eruptions + scale_fill_palette_c(warwick_palettes$ruby)
-eruptions + scale_fill_palette_b(warwick_palettes$teal)
+eruptions + 
+  scale_fill_palette_c(warwick_palettes$ruby)
+
+eruptions + 
+  scale_fill_palette_b(warwick_palettes$teal)
 ```
 
 #### Divergent
@@ -171,4 +172,4 @@ new_p +
 
 ## Typography and setting up custom fonts
 
-The University of Warwick's [typography brand guidance](https://warwick.ac.uk/about/brand/brand-guidelines/typography/) is to use the font Lato for all online text and the font Avenir Next for all print material. `theme_warwick()` has a `use` argument, that can be one of `"online"` or `"print"` (defaults to `"online"`), which will ensure the appropriate font for the use, *if* your system is set up for it, i.e. you have the fonts installed and the packages to render them in a plot. For details on how to ensure that your system is properly set up for this, see the [get started with warwickplots](https://warwick-stats-resources.github.io/warwickplots/articles/warwickplots.html) vignette.
+The University of Warwick's [typography brand guidance](https://warwick.ac.uk/about/brand/brand-guidelines/typography/) is to use the font Lato for all online text and the font Avenir Next for all print material. `theme_warwick()` has a `use` argument, that can be one of `"online"` or `"print"` (defaults to `"online"`), which will ensure the appropriate font for the use, *if* your system is set up for it, i.e. you have the fonts installed and the packages to render them in a plot. For details on how to ensure that your system is properly set up for this, see the [get started with warwickplots](https://warwick-stats-resources.github.io/warwickplots/articles/warwickplots.html#typography-and-setting-up-custom-fonts) vignette.

@@ -45,7 +45,7 @@ library(warwickplots)
 plot(warwick_palettes)
 ```
 
-For further details on using the palettes, please see the [warwickplots](https://warwick-stats-resources.github.io/warwickplots/articles/warwickplots.html) vignette and the documentation for the [palettes](https://mccarthy-m-g.github.io/palettes/index.html) package.
+For further details on using the palettes, please see the [get started with warwickplots](https://warwick-stats-resources.github.io/warwickplots/articles/warwickplots.html) vignette and the documentation for the [palettes](https://mccarthy-m-g.github.io/palettes/index.html) package.
 
 
 ## `theme_warwick()`

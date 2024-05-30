@@ -48,8 +48,9 @@ plot(warwick_palettes)
 
 ![](man/figures/README-palettes-1.png)<!-- -->
 
-For further details on using the palettes, please see the
-[warwickplots](https://warwick-stats-resources.github.io/warwickplots/articles/warwickplots.html)
+For further details on using the palettes, please see the [get started
+with
+warwickplots](https://warwick-stats-resources.github.io/warwickplots/articles/warwickplots.html)
 vignette and the documentation for the
 [palettes](https://mccarthy-m-g.github.io/palettes/index.html) package.
 

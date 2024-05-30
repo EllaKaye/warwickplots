@@ -1,8 +1,8 @@
 ---
-title: "Getting started with warwickplots"
+title: "Get started with warwickplots"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{Getting started with warwickplots}
+  %\VignetteIndexEntry{Get started with warwickplots}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
@@ -17,10 +17,6 @@ knitr::opts_chunk$set(
   comment = "#>",
   dev = "ragg_png"
 )
-```
-
-```{r setup}
-library(warwickplots)
 ```
 
 warwickplots is an R package with colour palettes and a [ggplot2](https://ggplot2.tidyverse.org) theme that are consistent with The University of Warwick's [branding](https://warwick.ac.uk/about/brand/brand-guidelines/),
@@ -63,9 +59,11 @@ pal_ramp(ends, n = 5, direction = -1) |> plot()
 
 For more on methods for working with palettes, see the [palettes](https://mccarthy-m-g.github.io/palettes/articles/palettes.html) vignette in the palettes package.
 
-## Using palettes in ggplot2
+## Using warwickplots with ggplot2
 
-The palettes package provides colour and fill scales for using its palettes in ggplot2. These are:
+### Scales
+
+Loading warwickplots also loads the palettes package, which provides colour and fill scales for using the palettes in ggplot2. These are:
 
 - `scale_colour_palette_d()`
 - `scale_colour_palette_c()`
@@ -76,14 +74,42 @@ The palettes package provides colour and fill scales for using its palettes in g
 
 The `_d` variants are for discrete scales, the `_c` variants are for continuous scales and the `_b` variants are for binned scales.
 
+### `theme_warwick()`
+
+`theme_warwick()` is an extension of `ggplot2::theme_minimal()`, offering the following in addition:
+
+- Text hierarchy, with different sizes and colours
+- Spacing, giving the text room to breathe 
+- Uses `ggtext::element_textbox_simple()` for the plot title and subtitle, to enable use of markdown and CSS styling, and text-wrapping if the title/subtitle is long
+- Places the legend above the plot
+- Uses Lato or Avenir Next font (for online or print use respectively), *if* your system is set up for it
+
+Below is a plot that uses the `warwick_palettes::primary` palette and `theme_warwick()`.
+
+```{r example, warning=FALSE}
+library(ggplot2)
+library(palmerpenguins)
+ggplot(penguins, aes(flipper_length_mm, body_mass_g, group = species)) +
+  geom_point(aes(colour = species, shape = species), alpha = 0.8, size = 2) +
+  scale_color_palette_d(warwick_palettes$primary) +
+  labs(title = "Penguin Size, Palmer Station LTER",
+       subtitle = "Flipper length and body mass for **<span style = 'color:#3C1053;'>Adelie</span>**, **<span style = 'color:#6DCDB8;'>Chinstrap</span>** and **<span style = 'color:#CB333B;'>Gentoo</span>** Penguins. This is based on data made available in the **palmerpenguins** R package.",
+       caption = "Visualization: Ella Kaye, Data: Gorman, Williams & Fraser (2014) DOI: 10.1371/journal.pone.009008",
+       x = "flipper length (mm)",
+       y = "body mass (g)") +
+  theme_warwick() +
+  theme(legend.position = 'none')
+```
+
+Note that any `theme_warwick()` defaults can be overridden with a subsequent call to `theme()`. 
 
 See the [using warwickplots with ggplot2](https://warwick-stats-resources.github.io/warwickplots/articles/ggplot2.html) vignettes for more information and examples and also the [using palettes with ggplot2](https://mccarthy-m-g.github.io/palettes/articles/ggplot2.html) vignette in the palettes package. The palettes package also has vignettes demonstrating how to use palettes with the [gt](https://gt.rstudio.com) package and the [biscale](https://chris-prener.github.io/biscale/) package.
 
-## Typography and setting up custom fonts
+### Typography and setting up custom fonts
 
 The University of Warwick's [typography brand guidance](https://warwick.ac.uk/about/brand/brand-guidelines/typography/) is to use the font Lato for all online text and the font Avenir Next for all print material. `theme_warwick()` has a `use` argument, that can be one of `"online"` or `"print"` (defaults to `"online"`), which will ensure the appropriate font for the use, *if* your system is set up for it, i.e. you have the fonts installed and the packages to render them in a plot. This section contains guidance on making sure your system is suitably set-up.
 
-### Setting up ragg
+#### Setting up ragg
 
 You need to have the [ragg](https://ragg.r-lib.org), [systemfonts](https://github.com/r-lib/systemfonts), and [textshaping]() packages installed. Installing ragg should install the other two:
 
@@ -105,7 +131,7 @@ You then need to ensure that whenever you output a plot, you do so using the **A
 
 - In RMarkdown, use `knitr::opts_chunk$set(dev = "ragg_png")` at the top of a script.
 
-### Checking the fonts are installed
+#### Checking the fonts are installed
 
 To use either of the fonts, you first need to check if they are installed on your system:
 
