@@ -165,10 +165,10 @@ Note that the title and subtitle now have less space between them. This is becau
 new_p + 
   theme(legend.position = "none",
         plot.title = element_textbox_simple(size = rel(1.6),
-                                            §margin = margin(12, 0, 6, 0)),
+                                            margin = margin(12, 0, 6, 0)),
         plot.caption = element_text(colour = "#CB333B"))
 ```
 
 ## Typography and setting up custom fonts
 
-The University of Warwick's [typography brand guidance](https://warwick.ac.uk/about/brand/brand-guidelines/typography/) is to use the font Lato for all online text and the font Avenir Next for all print material. `theme_warwick()` has a `use` argument, that can be one of `"online"` or `"print"` (defaults to `"online"`), which will ensure the appropriate font for the use, *if* your system is set up for it, i.e. you have the fonts installed and the packages to render them in a plot. For details on how to ensure that your system is properly set up for this, see the [get started with warwickplots](https://warwick-stats-resources.github.io/warwickplots/articles/warwickplots.html) vignette
+The University of Warwick's [typography brand guidance](https://warwick.ac.uk/about/brand/brand-guidelines/typography/) is to use the font Lato for all online text and the font Avenir Next for all print material. `theme_warwick()` has a `use` argument, that can be one of `"online"` or `"print"` (defaults to `"online"`), which will ensure the appropriate font for the use, *if* your system is set up for it, i.e. you have the fonts installed and the packages to render them in a plot. For details on how to ensure that your system is properly set up for this, see the [get started with warwickplots](https://warwick-stats-resources.github.io/warwickplots/articles/warwickplots.html) vignette.
