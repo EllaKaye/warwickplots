@@ -79,10 +79,12 @@ The `_d` variants are for discrete scales, the `_c` variants are for continuous 
 
 See the [using warwickplots with ggplot2](https://warwick-stats-resources.github.io/warwickplots/articles/ggplot2.html) vignettes for more information and examples and also the [using palettes with ggplot2](https://mccarthy-m-g.github.io/palettes/articles/ggplot2.html) vignette in the palettes package. The palettes package also has vignettes demonstrating how to use palettes with the [gt](https://gt.rstudio.com) package and the [biscale](https://chris-prener.github.io/biscale/) package.
 
-## Using the appropriate font
-The University of Warwick's [typography brand guidance](https://warwick.ac.uk/about/brand/brand-guidelines/typography/) is to use the font Lato for all online text and the font Avenir Next for all print material. `theme_warwick()` has a `use` argument, that can be one of `"online"` or `"print"` (defaults to `"online"`), which will ensure the appropriate font for the use, *if* your system is set up for it, i.e. you have the fonts installed and the packages to render them in a plot.
+## Typography and setting up custom fonts
+
+The University of Warwick's [typography brand guidance](https://warwick.ac.uk/about/brand/brand-guidelines/typography/) is to use the font Lato for all online text and the font Avenir Next for all print material. `theme_warwick()` has a `use` argument, that can be one of `"online"` or `"print"` (defaults to `"online"`), which will ensure the appropriate font for the use, *if* your system is set up for it, i.e. you have the fonts installed and the packages to render them in a plot. This section contains guidance on making sure your system is suitably set-up.
 
 ### Setting up ragg
+
 You need to have the [ragg](https://ragg.r-lib.org), [systemfonts](https://github.com/r-lib/systemfonts), and [textshaping]() packages installed. Installing ragg should install the other two:
 
 ```{r eval = FALSE}
@@ -104,6 +106,7 @@ You then need to ensure that whenever you output a plot, you do so using the **A
 - In RMarkdown, use `knitr::opts_chunk$set(dev = "ragg_png")` at the top of a script.
 
 ### Checking the fonts are installed
+
 To use either of the fonts, you first need to check if they are installed on your system:
 
 ```{r}
@@ -119,5 +122,3 @@ sysfonts::font_add_google("Lato")
 ```
 
 For further excellent, detailed guidance on setting up and working with custom fonts in R, see the [getting fonts to work in R](https://www.cararthompson.com/posts/2024-01-12-using-fonts-in-r-for-dataviz/2024-01-12_getting-fonts-to-work#set-your-graphics-device-to-agg) post by Cara Thompson and the [setting up and debugging custom fonts](https://yjunechoe.github.io/posts/2021-06-24-setting-up-and-debugging-custom-fonts/) post by June Choe.
-
-## Overriding `theme_warwick()`
