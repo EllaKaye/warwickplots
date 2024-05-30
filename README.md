@@ -91,6 +91,9 @@ Note that any `theme_warwick()` defaults can be overridden with a
 subsequent call to `theme()`.
 
 For further details, including how to ensure your system is set up to
-use custom fonts, see the
-[warwickplots](https://warwick-stats-resources.github.io/warwickplots/articles/warwickplots.html)
+use custom fonts, see the [get started
+warwickplots](https://warwick-stats-resources.github.io/warwickplots/articles/warwickplots.html)
+vignette. For further examples, including how to override
+`theme_warwick()`, see the [using warwickplots with
+ggplot2](https://warwick-stats-resources.github.io/warwickplots/articles/ggplot2.html)
 vignette.
