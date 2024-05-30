@@ -131,14 +131,12 @@ of the various palettes in <code>warwick_palettes</code> and
 <span>  <span class="fu"><a href="https://mccarthy-m-g.github.io/palettes/reference/scale_colour_palette_d.html" class="external-link">scale_colour_palette_d</a></span><span class="op">(</span><span class="va">warwick_palettes</span><span class="op">$</span><span class="va">primary</span><span class="op">[</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">3</span>, <span class="fl">5</span><span class="op">)</span><span class="op">]</span><span class="op">)</span> </span></code></pre></div>
 <p><img src="ggplot2_files/figure-html/unnamed-chunk-4-1.png" width="700"></p>
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">mpg_p</span> <span class="op">&lt;-</span> <span class="va">mpg</span> <span class="op">|&gt;</span> </span>
+<code class="sourceCode R"><span><span class="va">mpg</span> <span class="op">|&gt;</span> </span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html" class="external-link">filter</a></span><span class="op">(</span><span class="va">class</span> <span class="op">!=</span> <span class="st">"2seater"</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span>y <span class="op">=</span> <span class="va">fl</span>, fill <span class="op">=</span> <span class="va">class</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
 <span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html" class="external-link">geom_bar</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
 <span>    <span class="fu"><a href="https://mccarthy-m-g.github.io/palettes/reference/scale_colour_palette_d.html" class="external-link">scale_fill_palette_d</a></span><span class="op">(</span><span class="va">warwick_palettes</span><span class="op">$</span><span class="va">primary</span><span class="op">)</span> <span class="op">+</span></span>
-<span>    <span class="fu"><a href="../reference/theme_warwick.html">theme_warwick</a></span><span class="op">(</span><span class="op">)</span></span>
-<span></span>
-<span><span class="va">mpg_p</span></span></code></pre></div>
+<span>    <span class="fu"><a href="../reference/theme_warwick.html">theme_warwick</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
 <p><img src="ggplot2_files/figure-html/unnamed-chunk-5-1.png" width="700"></p>
 </div>
 <div class="section level4">
@@ -157,10 +155,13 @@ of the various palettes in <code>warwick_palettes</code> and
 <code class="sourceCode R"><span><span class="va">eruptions</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span><span class="va">faithfuld</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span><span class="va">waiting</span>, <span class="va">eruptions</span>, fill <span class="op">=</span> <span class="va">density</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_tile.html" class="external-link">geom_tile</a></span><span class="op">(</span><span class="op">)</span></span>
 <span></span>
-<span><span class="va">eruptions</span> <span class="op">+</span> <span class="fu"><a href="https://mccarthy-m-g.github.io/palettes/reference/scale_colour_palette_d.html" class="external-link">scale_fill_palette_c</a></span><span class="op">(</span><span class="va">warwick_palettes</span><span class="op">$</span><span class="va">ruby</span><span class="op">)</span></span></code></pre></div>
+<span><span class="va">eruptions</span> <span class="op">+</span> </span>
+<span>  <span class="fu"><a href="https://mccarthy-m-g.github.io/palettes/reference/scale_colour_palette_d.html" class="external-link">scale_fill_palette_c</a></span><span class="op">(</span><span class="va">warwick_palettes</span><span class="op">$</span><span class="va">ruby</span><span class="op">)</span></span></code></pre></div>
 <p><img src="ggplot2_files/figure-html/unnamed-chunk-7-1.png" width="700"></p>
 <div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">eruptions</span> <span class="op">+</span> <span class="fu"><a href="https://mccarthy-m-g.github.io/palettes/reference/scale_colour_palette_d.html" class="external-link">scale_fill_palette_b</a></span><span class="op">(</span><span class="va">warwick_palettes</span><span class="op">$</span><span class="va">teal</span><span class="op">)</span></span></code></pre></div>
+<code class="sourceCode R"><span></span>
+<span><span class="va">eruptions</span> <span class="op">+</span> </span>
+<span>  <span class="fu"><a href="https://mccarthy-m-g.github.io/palettes/reference/scale_colour_palette_d.html" class="external-link">scale_fill_palette_b</a></span><span class="op">(</span><span class="va">warwick_palettes</span><span class="op">$</span><span class="va">teal</span><span class="op">)</span></span></code></pre></div>
 <p><img src="ggplot2_files/figure-html/unnamed-chunk-7-2.png" width="700"></p>
 </div>
 <div class="section level4">
@@ -270,7 +271,7 @@ has a <code>use</code> argument, that can be one of
 <code>"online"</code>), which will ensure the appropriate font for the
 use, <em>if</em> your system is set up for it, i.e. you have the fonts
 installed and the packages to render them in a plot. For details on how
-to ensure that your system is properly set up for this, see the <a href="https://warwick-stats-resources.github.io/warwickplots/articles/warwickplots.html">get
+to ensure that your system is properly set up for this, see the <a href="https://warwick-stats-resources.github.io/warwickplots/articles/warwickplots.html#typography-and-setting-up-custom-fonts">get
 started with warwickplots</a> vignette.</p>
 </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
