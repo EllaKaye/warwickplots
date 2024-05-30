@@ -20,7 +20,7 @@ library(warwickplots)
 ```
 
 
-```{r setup2 message = FALSE}
+```{r setup2, message = FALSE}
 library(ggplot2)
 library(palmerpenguins)
 library(dplyr)
